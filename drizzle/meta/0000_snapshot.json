@@ -1,0 +1,81 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "036bdce1-5b9e-428e-825b-9e154721f25d",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "records": {
+      "name": "records",
+      "columns": {
+        "collection": {
+          "name": "collection",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "ym": {
+          "name": "ym",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "''"
+        },
+        "data": {
+          "name": "data",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "records_collection_ym_idx": {
+          "name": "records_collection_ym_idx",
+          "columns": [
+            "collection",
+            "ym"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "records_collection_id_pk": {
+          "columns": [
+            "collection",
+            "id"
+          ],
+          "name": "records_collection_id_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}
